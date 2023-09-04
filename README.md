@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+This is a Project which is using MERN(mongo,express,react and node).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#source-
+https://www.youtube.com/watch?v=xKs2IZZya7c
+channel name- Coding With Dawid
 
-## Available Scripts
+-----------IMPORTANT CONCEPT FOR BEGINNER LEVEL--------------------
 
-In the project directory, you can run:
+Here, we are using "token" after user's login and set the user details like "username" and "id" inside "token".
+then we send the "token" in Response with "cookie".
+---token created by using JWT (Json web Token)
+---JWT needs a "secret" string to create token so you can make a random string and save it in your env
+----EXAMPLE---
+--------------blog-app-backen/controller/user.js------(loginUser API)
 
-### `npm start`
+---we also need "secret" string when we are "fetching users info with api"
+---we send the cookie to backend and in api there will be a logic to get the use info...
+---EXAMPLE----
+--------------blog-app-backen/controller/user.js------(profile API)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#process to create cookie-----
+1.-first we check user exist by using "FindOne" query
+2.-if user exist then compare password,
+3.-If everything ok then create token.
+4.-you can send any data with token......
+5.-at the last send the token with help of cookie in Response
