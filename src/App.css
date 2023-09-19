@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+.dark-theme{
+  --app-bg: #071330;
+  --header-bg: rgb(253, 237, 8);
+  --header-text: #000;
+  --text-clr: #fff;
+  --btn-clr: rgb(0,0,200);
+  --card-bg: #ffff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-theme{
+  --app-bg: #071330;
+  --header-text: #fff;
+  --header-bg: rgb(0,128,0);
+  --text-clr: #fff;
+  --btn-clr: rgb(0,0,200);
+  --card-bg: #071330;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  height: 100%;
   min-height: 100vh;
+  max-height: 100%;
+  background: var(--app-bg);
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--header-bg);
+}
+header a.logo{
+  color: var(--header-text);
+  text-decoration: none;
+  margin-left: 18px;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+nav{
+  margin: 8px;
+}
+nav a{
+  font-size: 18px;
+  color: var(--header-text);
+  text-decoration: none;
+  margin-right: 33px;
+}
+div.login{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+div.loginpage{
+  height: 400px;
+  width: 350px;
+  background: green;
+  box-shadow: 15px 10px black;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+div.loginpage form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+div.loginpage form input{
+  width: 100%;
+  height: 30px;
+  margin:16px;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.bodyhome{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.card{
+  margin: 40px;
+  box-shadow: 15px 10px black;
+}
+.post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.post input{
+  height: 29px;
+  width: 80%;
+  margin: 10px;
+}
+div.post-page{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+div.post-page div.image{
+  max-height:300px;
+  display: flex;
+  overflow:hidden;
+}
+div.post-page div.image img{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+.reactquill {
+  background-color: white;
+  height: 400px;
+  border-radius: 0px;
+  width: 81%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
